@@ -1,0 +1,253 @@
+{% extends 'User/Base.html' %}
+{% load static %}
+{% block title %}About | Zeryons{% endblock %}
+{% block content %}
+
+<!-- CSS  -->
+
+<link rel="stylesheet" href="{% static 'User/css/about.css' %}">
+
+<!-- HERO SECTION STARTS -->
+<!-- ================= ABOUT HERO ================= -->
+<section class="about-hero">
+
+    <div class="about-hero-text" data-aos="fade-right">
+        <h5>WHO WE ARE</h5>
+
+        <h1>
+            Crafting <span class="gradient-text">Digital Growth</span><br>
+            For Modern Businesses
+        </h1>
+
+        <p>
+            At Zeryons, we blend creativity with cutting-edge technology to build 
+            powerful digital experiences. Our mission is simple — help businesses 
+            grow faster with smart, scalable, and future-ready solutions.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="/contact" class="btn-primary">Work With Us</a>
+            <a href="/services" class="btn-secondary">Our Services</a>
+        </div>
+    </div>
+
+    <div class="about-hero-img" data-aos="fade-left">
+        <img src="{% static 'User/images/about/about.svg' %}" alt="About Hero">
+    </div>
+
+</section>
+
+
+<!-- HERO SECTION ENDS  -->
+
+ <!-- ABOUT US FEAUTURES STARTS  -->
+
+<!-- ================= ABOUT FEATURES ================= -->
+<section class="about-features">
+
+    <div class="section-header">
+        <h5>WHY CHOOSE US</h5>
+        <h2>We Deliver <span class="gradient-text">Quality & Innovation</span></h2>
+        <p>
+            We focus on building powerful, scalable, and visually stunning digital solutions 
+            that help your business grow in today’s competitive world.
+        </p>
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Modern Development</h3>
+            <p>We use the latest technologies to build fast, scalable apps.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Creative Design</h3>
+            <p>Clean, user-focused UI/UX design that enhances experience.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Secure Systems</h3>
+            <p>Top-level security practices to protect your data.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-rocket"></i>
+            <h3>Performance Focus</h3>
+            <p>Optimized solutions that load fast and perform smoothly.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+ <!-- ABOUT US FEAUTURES END  -->
+
+
+<!-- TEAM SECTION STARTS  -->
+
+<!-- ================= TEAM SECTION ================= -->
+<!-- ================= TEAM SECTION ================= -->
+<section class="team">
+
+    <div class="section-header">
+        <h5>OUR TEAM</h5>
+        <h2>Meet The <span class="gradient-text">Experts</span></h2>
+        <p>
+            The people behind Zeryons who turn ideas into powerful digital experiences.
+        </p>
+    </div>
+
+    <div class="team-grid">
+
+        <!-- MEMBER 1 -->
+        <div class="team-card">
+            <div class="card-inner">
+                <div class="team-img">
+                    <img src="{% static 'User/images/about/team1.jpg' %}" alt="">
+                </div>
+                <h3>Sambhav Wakode</h3>
+                <p>Founder & Full Stack Developer</p>
+
+                <!-- <div class="team-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- MEMBER 2 -->
+        <div class="team-card">
+            <div class="card-inner">
+                <div class="team-img">
+                    <img src="{% static 'User/images/about/team2.jpeg' %}" alt="">
+                </div>
+                <h3>Harsh Shah</h3>
+                <p>Co-Founder & CEO</p>
+
+                <!-- <div class="team-social">
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- MEMBER 3 -->
+        <div class="team-card">
+            <div class="card-inner">
+                <div class="team-img">
+                    <img src="{% static 'User/images/about/team4.jpeg' %}" alt="">
+                </div>
+                <h3>Diya Patel</h3>
+                <p>Project Manager</p>
+
+                <!-- <div class="team-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- 🔥 NEW MEMBER 4 -->
+        <div class="team-card">
+            <div class="card-inner">
+                <div class="team-img">
+                    <img src="{% static 'User/images/about/team3.jpeg' %}" alt="">
+                </div>
+                <h3>Jiya Patel</h3>
+                <p>Full Stack Developer</p>
+
+                <!-- <div class="team-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TEAM SECTION ENDS  -->
+
+
+<!-- ACHIEVEMENT SECTION STARTS -->
+
+<!-- ================= STATS SECTION ================= -->
+<section class="stats">
+
+    <div class="section-header">
+        <h5>OUR ACHIEVEMENTS</h5>
+        <h2>Driving <span class="gradient-text">Results</span></h2>
+    </div>
+
+    <div class="stats-container">
+
+        <div class="stat-box">
+            <i class="fas fa-laptop-code"></i>
+            <h2 class="counter" data-target="150" data-suffix="+">50+</h2>
+            <div class="line"></div>
+            <p>Projects Completed</p>
+        </div>
+
+        <div class="stat-box">
+            <i class="fas fa-users"></i>
+            <h2 class="counter" data-target="120" data-suffix="+">50+</h2>
+            <div class="line"></div>
+            <p>Happy Clients</p>
+        </div>
+
+        <div class="stat-box">
+            <i class="fas fa-briefcase"></i>
+            <h2 class="counter" data-target="5" data-suffix="+">5+</h2>
+            <div class="line"></div>
+            <p>Years Experience</p>
+        </div>
+
+        <div class="stat-box">
+            <i class="fas fa-headset"></i>
+            <h2 class="counter" data-target="24" data-suffix="/7">24/7</h2>
+            <div class="line"></div>
+            <p>Support Available</p>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="{% static 'js/about.js' %}"></script>
+<!-- ACHIEVEMENT SECTION ENDS -->
+
+<!-- CTA STARTS -->
+
+<!-- ================= CTA SECTION ================= -->
+<section class="cta">
+
+    <div class="cta-container">
+
+        <h2>
+            Let’s Build Something <span class="gradient-text">Amazing</span> Together
+        </h2>
+
+        <p>
+            Ready to take your business to the next level? 
+            We create powerful digital solutions that drive real growth.
+        </p>
+
+        <div class="cta-buttons">
+            <a href="/contact" class="btn-primary">Start Your Project</a>
+            <a href="/services" class="btn-secondary">Explore Services</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA ENDS  -->
+
+{% endblock %}

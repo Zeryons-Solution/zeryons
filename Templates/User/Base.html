@@ -1,0 +1,158 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zeryons provides web development, app development, and IT services.">
+    <title>{% block title %}Zeryons - IT Solutions Company{% endblock %}</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'Admin/images/logo.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'User/css/base.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+    <!-- Loader -->
+<!-- Logo Loader -->
+<div id="loader">
+    <div class="loader-content">
+        <img src="{% static 'User/images/home/footerlogo.png' %}" alt="Zeryons Logo" class="loader-logo">
+        <h2 class="loader-text">Zeryons</h2>
+    </div>
+</div>
+    <!-- NAVBAR START -->
+
+<!-- ================= HTML ================= -->
+<nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo">
+        <a href="/">
+            <img src="{% static 'User/images/home/logo.png' %}" alt="Zeryons Logo">
+            <h1>ZERYONS</h1>
+        </a>
+    </div>
+
+    <!-- NAV LINKS -->
+    <ul class="nav-links" id="navLinks">
+        <li><a href="/"><b>Home</b></a></li>
+        <li><a href="/about"><b>About</b></a></li>
+        <li><a href="/services"><b>Services</b></a></li>
+        <li><a href="/contact"><b>Contact</b></a></li>
+    </ul>
+
+    <!-- BUTTON -->
+    <a href="/contact" class="nav-btn">Get Started</a>
+
+    <!-- HAMBURGER -->
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i> 
+    </div>
+</nav>
+    <!-- NAVBAR END -->
+
+    <!-- MAIN CONTENT STARTS -->
+    {% block content %}
+    {% endblock %}
+    <!-- MAIN CONTENT ENDS -->
+
+    <!-- FOOTER START -->
+<footer>
+    <div class="footer-extra-1"></div>
+    <div class="footer-extra-2"></div>
+
+    <div class="footer-container">
+
+        <!-- COMPANY -->
+        <div class="footer-col footer-brand">
+
+            <a href="/" class="footer-brand">
+                <img src="{% static 'User/images/home/footerlogo.png' %}" alt="Zeryons Logo">
+                <h1>ZERYONS</h1>
+            </a>
+
+            <p>
+                We build high-performance websites and digital solutions 
+                that help businesses grow faster in the modern world.
+            </p>
+
+        </div>
+
+        <!-- LINKS -->
+        <div class="footer-col footer-brand">
+            <h3>Links</h3>
+            <ul class="footer-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- SERVICES -->
+        <div class="footer-col footer-brand">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="/services">Web Development</a></li>
+                <li><a href="/services">App Development</a></li>
+                <li><a href="/services">SEO Optimization</a></li>
+                <li><a href="/services">UI/UX Design</a></li>
+            </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-col footer-brand">
+            <h3>Contact</h3>
+            <p>Email: zeryons.official@gmail.com</p>
+            <p>Whatsapp No. +91 83209 19370</p>
+            <p>Phone: +91 95747 77731</p>
+            <p>Location: Ahmedabad, Gujarat, India</p>
+
+            <div class="socials">
+                <a href="https://www.instagram.com/zeryons/"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/zeryons-solutions-316207401/"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+        <p>© 2026 Zeryons. All Rights Reserved.</p>
+    </div>
+
+</footer>
+    <!-- FOOTER ENDS -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
+<script>
+    window.addEventListener("load", function() {
+        const loader = document.getElementById("loader");
+        loader.style.transition = "opacity 0.6s ease";
+        loader.style.opacity = "0";
+
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 600);
+    });
+</script>
+</body>
+</html>

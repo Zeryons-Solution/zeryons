@@ -1,0 +1,275 @@
+{% extends 'User/Base.html' %}
+{% load static %}
+{% block title %}Zeryons{% endblock %}
+{% block content %}
+
+<!-- CSS  -->
+<link rel="stylesheet" href="{% static 'User/css/home.css' %}">
+
+<!-- HERO -->
+
+
+<section class="hero">
+
+    <div class="hero-text glass-card" data-aos="fade-right">
+        <h1>
+            Build <span class="gradient-text">Future</span><br>
+            Ready Websites
+        </h1>
+
+        <p>
+            We craft high-performance digital experiences that help businesses 
+            grow faster, smarter, and stronger online.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="/contact" class="btn-primary">Start Project</a>
+            <a href="/services" class="btn-secondary">Explore</a>
+        </div>
+    </div>
+
+    <div class="hero-img" data-aos="fade-left">
+        <img src="{% static 'User/images/home/hero.svg' %}" alt="Hero Image">
+    </div>
+
+</section>  
+<!-- HERO ENDS -->
+
+<!-- ABOUT -->
+<section class="about" data-aos="fade-up">
+
+    <div class="about-img">
+        <img src="{% static 'User/images/home/about.svg' %}" alt="About Zeryons">
+    </div>
+
+    <div class="about-text glass-card">
+
+        <h5>ABOUT US</h5>
+
+        <h2>
+            We Build <span class="gradient-text">Digital Experiences</span> 
+            That Drive Growth
+        </h2>
+
+        <p>
+            At Zeryons, we don’t just build websites — we craft high-performance digital solutions 
+            designed to elevate your brand, increase visibility, and drive real business results.
+        </p>
+
+        <p>
+            From startups to established businesses, we help you create a powerful online presence 
+            using modern technologies, scalable architecture, and user-focused design.
+        </p>
+
+        <div class="about-points">
+            <div><i class="fas fa-check-circle"></i> Modern & Scalable Solutions</div>
+            <div><i class="fas fa-check-circle"></i> Clean UI/UX Design</div>
+            <div><i class="fas fa-check-circle"></i> Fast & Secure Websites</div>
+        </div>
+
+    </div>
+
+</section>
+<!-- ABOUT ENDS  -->
+
+
+<!-- SERVICES -->
+<section class="services" data-aos="fade-up">
+
+    <!-- BACKGROUND LAYERS -->
+    <div class="bg-extra-1"></div>
+    <div class="bg-extra-2"></div>
+
+    <h5 class="section-tag">OUR SERVICES</h5>
+
+    <h2 class="section-title">
+        What We <span class="gradient-text">Offer</span>
+    </h2>
+
+    <div class="services-grid">
+
+        <div class="service-card" data-aos="zoom-in">
+            <div class="icon"><i class="fas fa-code"></i></div>
+            <h3>Website Development</h3>
+            <p>Custom, fast, and scalable websites built using modern technologies.</p>
+        </div>
+
+        <div class="service-card" data-aos="zoom-in">
+            <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3>App Development</h3>
+            <p>High-performance mobile apps designed for user engagement and growth.</p>
+        </div>
+
+        <div class="service-card" data-aos="zoom-in">
+            <div class="icon"><i class="fas fa-chart-line"></i></div>
+            <h3>SEO Optimization</h3>
+            <p>Rank higher on Google and attract more customers organically.</p>
+        </div>
+
+        <div class="service-card" data-aos="zoom-in">
+            <div class="icon"><i class="fas fa-paint-brush"></i></div>
+            <h3>UI/UX Design</h3>
+            <p>Modern and user-friendly designs that improve conversion rates.</p>
+        </div>
+
+        <div class="service-card" data-aos="zoom-in">
+            <div class="icon"><i class="fas fa-server"></i></div>
+            <h3>Hosting & Deployment</h3>
+            <p>Secure, fast and reliable hosting solutions with zero downtime.</p>
+        </div>
+
+        <div class="service-card" data-aos="zoom-in">
+            <div class="icon"><i class="fas fa-bullhorn"></i></div>
+            <h3>Digital Marketing</h3>
+            <p>Grow your business with targeted marketing strategies.</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- SERVICES ENDS -->
+
+
+<!-- PROCESS -->
+<section class="process" data-aos="fade-up">
+
+    <h5 class="section-tag">OUR PROCESS</h5>
+
+    <h2 class="section-title">
+        How We Build Your <span class="gradient-text">Website</span>
+    </h2>
+
+    <div class="process-timeline">
+
+        <!-- STEP -->
+        <div class="process-step" data-aos="fade-up">
+            <div class="step-number">01</div>
+            <h3>Requirement Discussion</h3>
+            <p>Understanding your goals, pages and features.</p>
+        </div>
+
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+            <div class="step-number">02</div>
+            <h3>Advance Payment</h3>
+            <p>Planning begins and Advance Payment 50%</p>
+        </div>
+
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+            <div class="step-number">03</div>
+            <h3>Communication Setup</h3>
+            <p>We stay connected via WhatsApp/Email.</p>
+        </div>
+
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+            <div class="step-number">04</div>
+            <h3>Design & Development</h3>
+            <p>UI design + coding your website.</p>
+        </div>
+
+        <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+            <div class="step-number">05</div>
+            <h3>Client Review</h3>
+            <p>Your feedback & revisions applied.</p>
+        </div>
+
+        <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+            <div class="step-number">06</div>
+            <h3>Testing</h3>
+            <p>Performance, bugs & responsiveness check.</p>
+        </div>
+
+        <div class="process-step" data-aos="fade-up" data-aos-delay="600">
+            <div class="step-number">07</div>
+            <h3>Final Payment</h3>
+            <p>Before final deployment.</p>
+        </div>
+
+        <div class="process-step" data-aos="fade-up" data-aos-delay="700">
+            <div class="step-number">08</div>
+            <h3>Website Live</h3>
+            <p>Your website goes live 🚀</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- PROCESS ENDS -->
+
+
+<!-- CTA -->
+<section class="cta-section" data-aos="fade-up">
+
+    <div class="cta-container">
+
+        <h2>
+            Ready to Build Your <span class="gradient-text">Dream Project?</span>
+        </h2>
+
+        <p>
+            Let’s turn your idea into a powerful digital product that grows your business.
+        </p>
+
+        <div class="cta-buttons">
+            <a href="/contact" class="cta-primary">Start Your Project</a>
+            <a href="/services" class="cta-secondary">View Services</a>
+        </div>
+
+        <!-- TRUST STATS -->
+        <div class="cta-stats">
+
+            <div class="stat">
+                <h3>50+</h3>
+                <p>Projects Delivered</p>
+            </div>
+
+            <div class="stat">
+                <h3>100%</h3>
+                <p>Client Satisfaction</p>
+            </div>
+
+            <div class="stat">
+                <h3>24/7</h3>
+                <p>Support Available</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- CTA ENDS -->
+
+
+<!-- BUSINESS -->
+<section class="business" data-aos="fade-up">
+
+    <h5 class="section-tag">INDUSTRIES</h5>
+
+    <h2 class="section-title">
+        Business We <span class="gradient-text">Work With</span>
+    </h2>
+
+    <div class="business-grid">
+
+        <div class="biz"><i class="fas fa-store"></i><p>Retail Shops</p></div>
+        <div class="biz"><i class="fas fa-utensils"></i><p>Restaurants</p></div>
+        <div class="biz"><i class="fas fa-cut"></i><p>Salons</p></div>
+        <div class="biz"><i class="fas fa-tshirt"></i><p>Clothing</p></div>
+
+        <div class="biz"><i class="fas fa-graduation-cap"></i><p>Institutes</p></div>
+        <div class="biz"><i class="fas fa-tools"></i><p>Services</p></div>
+        <div class="biz"><i class="fas fa-home"></i><p>Real Estate</p></div>
+        <div class="biz"><i class="fas fa-heartbeat"></i><p>Healthcare</p></div>
+
+        <div class="biz"><i class="fas fa-industry"></i><p>Manufacturers</p></div>
+        <div class="biz"><i class="fas fa-plane"></i><p>Travel</p></div>
+        <div class="biz"><i class="fas fa-dumbbell"></i><p>Fitness</p></div>
+        <div class="biz"><i class="fas fa-camera"></i><p>Photography</p></div>
+
+    </div>
+
+</section>
+<!-- BUSINESS ENDS -->
+
+
+{% endblock %}

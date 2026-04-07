@@ -1,0 +1,371 @@
+/* ================= GLOBAL FIX ================= */
+
+html, body {
+    overflow-x: hidden;
+}
+
+section {
+    overflow: hidden;
+}
+
+/* ================= GRADIENT TEXT ================= */
+
+.gradient-text {
+    background: linear-gradient(135deg, #00abe4, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ================= HERO ================= */
+
+.services-hero {
+    padding: 160px 60px 100px;
+    text-align: center;
+    position: relative;
+    background: #ffffff;
+}
+
+/* 🔥 RIGHT GLOW */
+.services-hero::before {
+    content: "";
+    position: absolute;
+
+    width: 1500px;
+    height: 1500px;
+
+    background: radial-gradient(circle, rgba(0,171,228,0.5) 0%, rgba(0,171,228,0.2) 35%, transparent 75%);
+    
+    top: -400px;
+    right: -500px;
+
+    filter: blur(180px);
+    z-index: 0;
+}
+
+/* 🔥 LEFT GLOW */
+.services-hero::after {
+    content: "";
+    position: absolute;
+
+    width: 1500px;
+    height: 1500px;
+
+    background: radial-gradient(circle, rgba(0,171,228,0.45) 0%, rgba(0,171,228,0.15) 40%, transparent 75%);
+    
+    bottom: -500px;
+    left: -500px;
+
+    filter: blur(200px);
+    z-index: 0;
+}
+
+/* TEXT */
+.services-hero-text {
+    max-width: 700px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.services-hero h1 {
+    font-size: 56px;
+    line-height: 1.2;
+}
+
+.services-hero h5 {
+    color: #00abe4;
+}
+
+.services-hero p {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+/* ================= HERO BUTTONS ================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* PRIMARY */
+.btn-primary {
+    background: linear-gradient(135deg, #00abe4, #00c6ff);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+
+    box-shadow: 0 8px 25px rgba(0,171,228,0.4);
+
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,171,228,0.5);
+}
+
+/* SECONDARY */
+.btn-secondary {
+    background: transparent;
+    color: #00abe4;
+    padding: 14px 28px;
+    border-radius: 50px;
+    border: 2px solid #00abe4;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #00abe4;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,171,228,0.3);
+}
+
+/* ================= GLASS ================= */
+
+.glass-card,
+.service-card,
+.step,
+.why-card {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(25px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+
+    padding: 40px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+
+    transition: all 0.4s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🔥 GLOW BORDER */
+.service-card::before,
+.step::before,
+.why-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+
+    background: linear-gradient(120deg, transparent, rgba(0,171,228,0.4), transparent);
+
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* SHOW ON HOVER */
+.service-card:hover::before,
+.step:hover::before,
+.why-card:hover::before {
+    opacity: 1;
+}
+
+/* HOVER EFFECT */
+.service-card:hover,
+.step:hover,
+.why-card:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 30px 80px rgba(0,171,228,0.25);
+}
+
+/* ================= SERVICES HERO RESPONSIVENESS FIX ================= */
+
+/* ================= SERVICES HERO RESPONSIVENESS FIX ================= */
+
+/* ================= SERVICES HERO RESPONSIVENESS FIX ================= */
+
+@media (max-width: 1024px) {
+
+    .services-hero {
+        padding: 140px 40px 80px;
+    }
+
+    .services-hero-text {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        box-sizing: border-box; /* ✅ FIX 1 (IMPORTANT) */
+    }
+
+    .services-hero h1 {
+        font-size: 42px;
+        line-height: 1.3;
+        word-wrap: break-word; /* ✅ FIX 2 */
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .services-hero {
+        padding: 130px 20px 60px;
+    }
+
+    .services-hero-text {
+        width: 100%;
+        padding: 25px 18px; /* ✅ FIX 3 (reduce padding so text fits) */
+        box-sizing: border-box;
+    }
+
+    .services-hero h1 {
+        font-size: 32px;
+        line-height: 1.3;
+        word-wrap: break-word;
+    }
+
+    .services-hero p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .services-hero-text {
+        padding: 22px 15px; /* ✅ tighter padding for small phones */
+    }
+
+    .services-hero h1 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+}
+
+
+/* ================= SERVICES ================= */
+
+.services {
+    padding: 100px 60px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.service-card i {
+    font-size: 32px;
+    color: #00abe4;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #555;
+}
+
+/* ================= PROCESS ================= */
+
+.process {
+    padding: 100px 60px;
+    text-align: center;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.step span {
+    font-size: 30px;
+    color: #00abe4;
+    font-weight: bold;
+}
+
+/* ================= WHY US ================= */
+
+.why-us {
+    padding: 100px 60px;
+    text-align: center;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.why-card i {
+    font-size: 28px;
+    color: #00abe4;
+    margin-bottom: 15px;
+}
+
+.why-card p {
+    color: #555;
+}
+
+/* ================= HEADER ================= */
+
+.section-header h5 {
+    color: #00abe4;
+}
+
+.section-header h2 {
+    font-size: 42px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+    .services-grid,
+    .process-steps,
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .services-hero {
+        padding: 140px 30px;
+    }
+
+    .services-grid,
+    .process-steps,
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}

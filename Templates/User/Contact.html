@@ -1,0 +1,146 @@
+{% extends 'User/Base.html' %}
+{% load static %}
+{% block title %}Contact | Zeryons{% endblock %}
+{% block content %}
+<!-- ================= CONTACT HERO ================= -->
+
+<!-- ================= CONTACT HERO ================= -->
+
+<!-- ================= CONTACT HERO ================= -->
+
+<!-- ================= CONTACT HERO ================= -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Zeryons</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'User/css/contact.css' %}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<!-- ================= MESSAGE ================= -->
+<div class="alert-container">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+<!-- ================= HERO ================= -->
+
+<section class="contact-hero">
+
+    <div class="contact-hero-text glass-card">
+        <h5>CONTACT US</h5>
+
+        <h1>
+            Let’s Build Something <span class="gradient-text">Amazing</span>
+        </h1>
+
+        <p>
+            Have an idea, project, or question? We’d love to hear from you.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact">
+
+    <div class="contact-container">
+
+        <!-- LEFT -->
+        <div class="contact-info">
+
+            <div class="info-card glass-card">
+                <i class="fas fa-phone"></i>
+                <h3>Call Us</h3>
+                <p>+91 95747 77731</p>
+            </div>
+
+            <div class="info-card glass-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>zeryons.official@gmail.com</p>
+            </div>
+
+            <div class="info-card glass-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location</h3>
+                <p>Ahmedabad, Gujarat, India</p>
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+        <div class="contact-form glass-card">
+
+            <h2>Send Message</h2>
+
+            <form method="POST" action="/contact_storing">
+                {% csrf_token %}
+
+                <div class="input-group">
+                    <input type="text" name="name" required placeholder=" ">
+                    <label>Your Name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" name="email" required placeholder=" " >
+                    <label>Your Email</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="tel" name="phone" required placeholder=" ">
+                    <label>Phone Number</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" name="subject" required placeholder=" ">
+                    <label>Subject</label>
+                </div>
+
+                <div class="input-group">
+                    <textarea name="message" rows="4" required placeholder=" "></textarea>
+                    <label>Your Message</label>
+                </div>
+
+                <button type="submit" class="btn-primary">Send Message</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAP ================= -->
+
+<section class="map">
+    <iframe src="https://maps.google.com/maps?q=Ahmedabad&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<script>
+    setTimeout(() => {
+        const alert = document.querySelector('.alert-success');
+        if(alert){
+            alert.style.opacity = '0';
+            alert.style.transform = 'translateY(-10px)';
+        }
+    }, 3000);
+</script>
+
+{% endblock %}
