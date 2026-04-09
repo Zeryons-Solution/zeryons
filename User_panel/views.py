@@ -12,7 +12,7 @@ def Home(request):
     return render(request,'User/Home.html',{})
 
 def About_Us(request):
-    return render(request,'User/About Us.html',{})
+    return render(request,'User/Aboutus.html',{})
 
 def Services(request):
     return render(request,'User/Services.html',{})
