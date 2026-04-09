@@ -37,32 +37,32 @@ def Contact_Storing(request):
             Message=message
             )
 
-        # 📩 Email to Admin
-        send_mail(
-            subject=f"New Contact - {name}",
-            message=f"Name: {name}\nEmail: {email}\nPhone: {phone}\nSubject: {subject}\nMessage: {message}",
-            from_email='zeryons.official@gmail.com',
-            recipient_list=['zeryons.official@gmail.com'],
-        )
+#         # 📩 Email to Admin
+#         send_mail(
+#             subject=f"New Contact - {name}",
+#             message=f"Name: {name}\nEmail: {email}\nPhone: {phone}\nSubject: {subject}\nMessage: {message}",
+#             from_email='zeryons.official@gmail.com',
+#             recipient_list=['zeryons.official@gmail.com'],
+#         )
 
-        # 📩 Email to User (Auto Reply)
-        send_mail(
-            subject="Thanks for contacting Zeryons!",
-            message=f"""Hi {name},
+#         # 📩 Email to User (Auto Reply)
+#         send_mail(
+#             subject="Thanks for contacting Zeryons!",
+#             message=f"""Hi {name},
 
-Thank you for contacting Zeryons.
+# Thank you for contacting Zeryons.
 
-We’ve received your message and our team will review it shortly. One of our representatives will get back to you as soon as possible.
+# We’ve received your message and our team will review it shortly. One of our representatives will get back to you as soon as possible.
 
-If your inquiry is urgent, feel free to reply to this email.
+# If your inquiry is urgent, feel free to reply to this email.
 
-We appreciate your interest in working with us.
+# We appreciate your interest in working with us.
 
-Best regards,  
-Team Zeryons
-        """,
-            from_email='zeryons.official@gmail.com',
-            recipient_list=[email],
-        )
+# Best regards,  
+# Team Zeryons
+#         """,
+#             from_email='zeryons.official@gmail.com',
+#             recipient_list=[email],
+#         )
         messages.success(request, "Message sent successfully!")
         return redirect('/contact')
