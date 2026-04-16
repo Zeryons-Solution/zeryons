@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
-from decouple import config
 import dj_database_url
+from decouple import config
 from pathlib import Path
 
 
@@ -76,6 +76,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Zeryons.wsgi.application'
 
 
+
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -85,13 +86,12 @@ WSGI_APPLICATION = 'Zeryons.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
+    'default': dj_database_url.parse(
+        config('DATABASE_URL'),
+        conn_max_age=600
     )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
