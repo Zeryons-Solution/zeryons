@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'Zeryons.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(
         config('DATABASE_URL'),
-        conn_max_age=600
+        conn_max_age=600,
         ssl_require=True
     )
 }
