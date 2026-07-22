@@ -2,7 +2,6 @@
 {
   "version": 2,
   "buildCommand": "python manage.py collectstatic --noinput",
-  "installCommand": "pip install -r requirements.txt",
   "outputDirectory": "staticfiles",
   "framework": null,
   "routes": [
