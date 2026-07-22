@@ -9,5 +9,5 @@ class Contact_Data(models.Model):
     Message = models.TextField()
     Created_at = models.DateTimeField(auto_now_add=True)
 
-    class Meta():
+    class Meta:
         db_table = 'Contact_Data'

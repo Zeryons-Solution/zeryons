@@ -30,18 +30,18 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 # UPDATED: Fixed ALLOWED_HOSTS for Vercel deployment
-# - Removed invalid URL format (https://zeryons.up.railway.app)
-# - Added Vercel domain with wildcard for all Vercel deployments
-# - Kept production domains and local development hosts
+# - Keep the production domains from the existing configuration
+# - Include Vercel deployment hosts and wildcard support for preview deployments
+# - Preserve local development hosts for Django testing
 # - ALLOWED_HOSTS must contain only hostnames/domains, NOT full URLs
 ALLOWED_HOSTS = [
-    "zeryons.vercel.app",    # Main Vercel deployment
-    ".vercel.app",           # Wildcard for all Vercel preview deployments
-    "zeryons.com",           # Production domain
-    "www.zeryons.com",       # WWW subdomain
+    "zeryons.vercel.app",      # Main Vercel deployment
+    ".vercel.app",             # Wildcard for all Vercel preview deployments
+    "www.zeryons.com",         # WWW subdomain
+    "zeryons.com",             # Production domain
     "zeryons.up.railway.app", # Railway alternative deployment
-    "localhost",             # Local development
-    "127.0.0.1",             # Local development IP
+    "localhost",              # Local development
+    "127.0.0.1",              # Local development IP
 ]
 
 # ADDED: CSRF_TRUSTED_ORIGINS for cross-domain requests
@@ -49,9 +49,9 @@ ALLOWED_HOSTS = [
 # Ensures that form submissions from these origins are trusted
 CSRF_TRUSTED_ORIGINS = [
     "https://zeryons.vercel.app",
-    "https://*.vercel.app",
-    "https://zeryons.com",
     "https://www.zeryons.com",
+    "https://zeryons.com",
+    "https://zeryons.up.railway.app",
 ]
 
 # Application definition
