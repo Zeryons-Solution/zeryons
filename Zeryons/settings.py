@@ -29,7 +29,30 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['www.zeryons.com','zeryons.com','https://zeryons.up.railway.app']
+# UPDATED: Fixed ALLOWED_HOSTS for Vercel deployment
+# - Removed invalid URL format (https://zeryons.up.railway.app)
+# - Added Vercel domain with wildcard for all Vercel deployments
+# - Kept production domains and local development hosts
+# - ALLOWED_HOSTS must contain only hostnames/domains, NOT full URLs
+ALLOWED_HOSTS = [
+    "zeryons.vercel.app",    # Main Vercel deployment
+    ".vercel.app",           # Wildcard for all Vercel preview deployments
+    "zeryons.com",           # Production domain
+    "www.zeryons.com",       # WWW subdomain
+    "zeryons.up.railway.app", # Railway alternative deployment
+    "localhost",             # Local development
+    "127.0.0.1",             # Local development IP
+]
+
+# ADDED: CSRF_TRUSTED_ORIGINS for cross-domain requests
+# This is critical for Vercel deployment to prevent CSRF errors
+# Ensures that form submissions from these origins are trusted
+CSRF_TRUSTED_ORIGINS = [
+    "https://zeryons.vercel.app",
+    "https://*.vercel.app",
+    "https://zeryons.com",
+    "https://www.zeryons.com",
+]
 
 # Application definition
 
@@ -159,9 +182,3 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
-
-
-
-
-
-
