@@ -52,6 +52,7 @@ ALLOWED_HOSTS = [
 # Ensures that form submissions from these origins are trusted
 CSRF_TRUSTED_ORIGINS = [
     "https://zeryons.vercel.app",
+    "https://*.vercel.app",
     "https://www.zeryons.com",
     "https://zeryons.com",
     "https://zeryons.up.railway.app",
