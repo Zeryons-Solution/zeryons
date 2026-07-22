@@ -1,4 +1,3 @@
-
 {
   "version": 2,
   "framework": null,
@@ -6,8 +5,7 @@
   "outputDirectory": "staticfiles",
   "functions": {
     "api/index.py": {
-      "runtime": "python3.12",
-      "maxDuration": 30
+      "runtime": "python3.12"
     }
   },
   "routes": [
