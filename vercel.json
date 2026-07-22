@@ -1,9 +1,15 @@
 
 {
   "version": 2,
-  "buildCommand": "python manage.py collectstatic --noinput",
-  "outputDirectory": "staticfiles",
   "framework": null,
+  "buildCommand": "pip install -r requirements.txt && python manage.py collectstatic --noinput",
+  "outputDirectory": "staticfiles",
+  "functions": {
+    "api/index.py": {
+      "runtime": "python3.12",
+      "maxDuration": 30
+    }
+  },
   "routes": [
     {
       "src": "/static/(.*)",
@@ -11,7 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/api/index.py"
     }
   ]
 }
