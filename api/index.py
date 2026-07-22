@@ -2,8 +2,8 @@
 """
 Vercel serverless function entry point for Django application.
 
-This handles all HTTP requests on Vercel's serverless platform.
-Requests are routed through Django's WSGI application.
+Uses serverless-wsgi to adapt Django's WSGI application
+for Vercel's serverless Python runtime.
 """
 
 import os
@@ -17,18 +17,16 @@ sys.path.insert(0, str(BASE_DIR))
 # Set Django settings module
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Zeryons.settings')
 
-# Import Django WSGI application
-from django.core.wsgi import get_wsgi_application
-
-# Create WSGI application instance
-app = get_wsgi_application()
+# Import serverless-wsgi handler to adapt WSGI for Vercel
+from serverless_wsgi import handle
 
 # Vercel serverless function handler
-def handler(request):
+def handler(request, context):
     """
-    Handle incoming HTTP requests on Vercel.
-    
-    Vercel calls this function with a request object and expects
-    a response object. The WSGI app handles the actual request.
+    Handle incoming HTTP requests on Vercel via serverless-wsgi.
+
+    serverless-wsgi translates between Vercel's event/context
+    format and Django's WSGI interface.
     """
-    return app(request.environ, request.start_response)
+    return handle(request, context)
+
